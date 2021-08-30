@@ -32,10 +32,7 @@ class ArrowObjectPool : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Gets pooled objects from the pool.
-    /// </summary>
-    /// <returns></returns>
+    // Gets pooled objects from the pool.
     public Indicator GetPooledObject()
     {
         for (int i = 0; i < pooledObjects.Count; i++)
@@ -56,9 +53,7 @@ class ArrowObjectPool : MonoBehaviour
         return null;
     }
 
-    /// <summary>
-    /// Deactive all the objects in the pool.
-    /// </summary>
+    // Deactive all the objects in the pool.
     public void DeactivateAllPooledObjects()
     {
         foreach (Indicator arrow in pooledObjects)

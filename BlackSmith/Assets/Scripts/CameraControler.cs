@@ -20,8 +20,6 @@ public class CameraControler : MonoBehaviour
     public float lowY;
     public bool cameraCanScroll = false;
     public bool cameraCanFollow = false;
-    public Button buttonLeft;
-    public Button buttonRight;
     Camera cam;
  
     void Start()
@@ -101,15 +99,6 @@ public class CameraControler : MonoBehaviour
                 }
             }
         }
-
-        //Show where the player is
-        Vector3 viewPos = cam.WorldToViewportPoint(target.position);
-        if (viewPos.x > 0.5F)
-            buttonRight.gameObject.SetActive(true);
-        else
-            buttonLeft.gameObject.SetActive(true);
-
-
     }
 
     public void AlignCameraToPlayer()

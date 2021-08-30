@@ -4,36 +4,21 @@ namespace PixelPlay.OffScreenIndicator
 {
     public class OffScreenIndicatorCore
     {
-        /// <summary>
-        /// Gets the position of the target mapped to screen cordinates.
-        /// </summary>
-        /// <param name="mainCamera">Refrence to the main camera</param>
-        /// <param name="targetPosition">Target position</param>
-        /// <returns></returns>
+        // Gets the position of the target mapped to screen cordinates.
         public static Vector3 GetScreenPosition(Camera mainCamera, Vector3 targetPosition)
         {
             Vector3 screenPosition = mainCamera.WorldToScreenPoint(targetPosition);
             return screenPosition;
         }
 
-        /// <summary>
-        /// Gets if the target is within the view frustrum.
-        /// </summary>
-        /// <param name="screenPosition">Position of the target mapped to screen cordinates</param>
-        /// <returns></returns>
+        // Gets if the target is within the view frustrum.
         public static bool IsTargetVisible(Vector3 screenPosition)
         {
             bool isTargetVisible = screenPosition.z > 0 && screenPosition.x > 0 && screenPosition.x < Screen.width && screenPosition.y > 0 && screenPosition.y < Screen.height;
             return isTargetVisible;
         }
 
-        /// <summary>
-        /// Gets the screen position and angle for the arrow indicator. 
-        /// </summary>
-        /// <param name="screenPosition">Position of the target mapped to screen cordinates</param>
-        /// <param name="angle">Angle of the arrow</param>
-        /// <param name="screenCentre">The screen  centre</param>
-        /// <param name="screenBounds">The screen bounds</param>
+        // Gets the screen position and angle for the arrow indicator. 
         public static void GetArrowIndicatorPositionAndAngle(ref Vector3 screenPosition, ref float angle, Vector3 screenCentre, Vector3 screenBounds)
         {
             // Our screenPosition's origin is screen's bottom-left corner.

@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     //public Slider progressTaskSlider;
     Animator myAnim;
     AudioSource playerAS;
+    public AudioClip forgeHitSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +86,28 @@ public class PlayerMovement : MonoBehaviour
        // Vector3 sliderScale = progressTaskSlider.transform.localScale;
         //sliderScale.x *= -1;
         //progressTaskSlider.transform.localScale = sliderScale;
+    }
+
+    void ActionForge()
+    {
+        //if(!isMoving)
+        //{
+/*            if(taskProgress >= taskProgressMax)
+            {   
+                isWaterForging = false;
+                isTaskFinished = true;
+                progressTaskSlider.gameObject.SetActive(false);
+            }
+            else
+            {*/
+                //Instantiate(forgeWaterCool, forgeWaterTip.transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
+                playerAS.PlayOneShot(forgeHitSound);
+            //}
+            // Destroy(objectToForge);
+            // objectToForge = (GameObject)Instantiate(itemToForge,itemToForgePos);
+            // objectToForgeSprite = objectToForge.GetComponent<SpriteRenderer>();
+            // objectToForgeSprite.sortingOrder = 10;
+        //}
     }
 
     
