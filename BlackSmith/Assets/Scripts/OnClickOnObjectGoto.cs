@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class OnClickOnObjectGoto : MonoBehaviour
 {
@@ -10,16 +11,13 @@ public class OnClickOnObjectGoto : MonoBehaviour
     void Start()
     {
        // gotoPosition = gameObject;
-
     }
         
     void OnMouseDown()
     {
-        {
-            Debug.Log("J'ai Cliqué " + gameObject.name);
-            Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
-            doGoto.isClickeed(gotoPosition.transform);
-        }
+        //Debug.Log("J'ai Cliqué " + gameObject.name);
+        Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
+        doGoto.isClickeed(gotoPosition.transform);
     }
 }
 

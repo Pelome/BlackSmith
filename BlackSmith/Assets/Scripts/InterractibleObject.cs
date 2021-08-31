@@ -16,21 +16,21 @@ public class InterractibleObject : MonoBehaviour
         
     }
 
-    void OnTriggerStay2D(Collider2D other)
+/*    void OnTriggerStay2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
 
             GameObject.Find("Canvas").SetActive(true);
         }
-    }
+    }*/
 
-    void OnTriggerExit2D(Collider2D other)
+/*    void OnTriggerExit2D(Collider2D other)
     {
         if(other.tag == "Player")
         {
 
             GameObject.Find("Canvas").SetActive(false);
         }
-    }
+    }*/
 }
