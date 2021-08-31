@@ -17,7 +17,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
     {
         {
             Debug.Log("J'ai Cliqué " + gameObject.name);
-            PlayerMovement doGoto = myPlayer.gameObject.GetComponent<PlayerMovement>();
+            Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
             doGoto.isClickeed(gotoPosition.transform);
         }
     }
