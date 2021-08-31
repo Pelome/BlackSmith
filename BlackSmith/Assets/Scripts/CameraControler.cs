@@ -88,13 +88,13 @@ public class CameraControler : MonoBehaviour
                 {
                     if(this.transform.position.x < outerRight)
                     {
-                        transform.Translate(move, Space.World);
+                        transform.Translate(-move, Space.World);
                     }
                 }
                 else{
                     if(this.transform.position.x > outerLeft)
                     {
-                        transform.Translate(move, Space.World);
+                        transform.Translate(-move, Space.World);
                     }
                 }
             }
