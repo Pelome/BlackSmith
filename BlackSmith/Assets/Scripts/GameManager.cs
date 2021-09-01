@@ -9,6 +9,14 @@ public class GameManager : MonoBehaviour
     public GameObject[] objectsInStash;
     public int goldInStash;
 
+    //objectToCraft
+    public GameObject objectToCraft;
+    private int objectToCraftID;
+    private string objectToCraftName;
+    private int objectCraftStepMax;
+    private int objectCraftStep;
+
+
     private void Awake()
     {
         if(GameManager.instance != null)
@@ -33,7 +41,13 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //GetObjectToCraftScript
+        //this have to be passed outside update but later in a future function OnObjectChange()
+        ObjectToForge_Controller objectToCraftScript = objectToCraft.gameObject.GetComponent<ObjectToForge_Controller>();
         
+        objectToCraftID = objectToCraftScript.objectID;
+        objectToCraftName = objectToCraftScript.objectName;
+        objectCraftStepMax = objectToCraftScript.objectStepMax;
     }
 
     public int GetCurrentGold()
@@ -52,4 +66,26 @@ public class GameManager : MonoBehaviour
 */
         return goldInStash;
     }
+
+
+
+    //prendre objet a crafter
+    public void TakeObjectToCraft()
+    {
+
+    }
+
+    //casser objet a crafter en cas d'echec
+    public void DestroyObjectToCraft()
+    {
+
+    }
+
+    //poser objet crafté
+    public void DropObjectToCraft()
+    {
+
+    }
+
+
 }

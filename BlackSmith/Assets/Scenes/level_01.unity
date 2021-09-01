@@ -11470,10 +11470,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7833159963509252791, guid: 0ccdc414681c75045bf75f3ebf9e57c9, type: 3}
-      propertyPath: speed
-      value: 0.03
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ccdc414681c75045bf75f3ebf9e57c9, type: 3}
 --- !u!1 &1060486978 stripped
@@ -13932,6 +13928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsInStash: []
   goldInStash: 50
+  objectToCraft: {fileID: 2571462997282751200, guid: 776cf988458347a4680459805b803f6c, type: 3}
 --- !u!4 &1777499477
 Transform:
   m_ObjectHideFlags: 0
