@@ -88,16 +88,16 @@ TextureImporter:
     second: TX Village Props_27
   - first:
       213: -151089886132204264
-    second: TX Village Props_28
+    second: Poteau_01
   - first:
       213: 4309315821430117634
-    second: TX Village Props_29
+    second: Poteau_02
   - first:
       213: -1178898175854549403
-    second: TX Village Props_30
+    second: Poteau_03
   - first:
       213: 3739738541205097307
-    second: TX Village Props_31
+    second: Barriere_01
   - first:
       213: 5609814161109826937
     second: TX Village Props_32
@@ -115,7 +115,7 @@ TextureImporter:
     second: TX Village Props_36
   - first:
       213: -1940723075617620017
-    second: TX Village Props_37
+    second: Barriere_02
   - first:
       213: 8988621687123879679
     second: TX Village Props_38
@@ -127,13 +127,13 @@ TextureImporter:
     second: TX Village Props_40
   - first:
       213: 7010505304851258987
-    second: TX Village Props_41
+    second: Barriere_03
   - first:
       213: -8151615092473205008
     second: TX Village Props_42
   - first:
       213: 2477197507354023845
-    second: TX Village Props_43
+    second: Barriere_1
   - first:
       213: -8783787247767299470
     second: TX Village Props_44
@@ -1105,7 +1105,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_28
+      name: Poteau_01
       rect:
         serializedVersion: 2
         x: 6
@@ -1126,7 +1126,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_29
+      name: Poteau_02
       rect:
         serializedVersion: 2
         x: 25
@@ -1147,7 +1147,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_30
+      name: Poteau_03
       rect:
         serializedVersion: 2
         x: 42
@@ -1168,7 +1168,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_31
+      name: Barriere_01
       rect:
         serializedVersion: 2
         x: 65
@@ -1294,7 +1294,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_37
+      name: Barriere_02
       rect:
         serializedVersion: 2
         x: 65
@@ -1378,7 +1378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_41
+      name: Barriere_03
       rect:
         serializedVersion: 2
         x: 64
@@ -1420,7 +1420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TX Village Props_43
+      name: Barriere_1
       rect:
         serializedVersion: 2
         x: 4
