@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   indicatorType: 1
+  levelCam: {fileID: 0}
 --- !u!1 &1086876969492358
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.99607843}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -291,9 +292,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1794632055350858003, guid: a726cfe3ad1b2794bb5fa6357aded006, type: 3}
-        m_TargetAssemblyTypeName: CameraControler, Assembly-CSharp
-        m_MethodName: AlignCameraToPlayer
+      - m_Target: {fileID: 11434930}
+        m_TargetAssemblyTypeName: Indicator, Assembly-CSharp
+        m_MethodName: buttonToAlign
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
