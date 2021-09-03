@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Thief
   layers:
   - Default
   - TransparentFX
@@ -55,6 +56,9 @@ TagManager:
     locked: 0
   - name: Horse
     uniqueID: 2846790467
+    locked: 0
+  - name: Pnj
+    uniqueID: 1399066129
     locked: 0
   - name: Player
     uniqueID: 2879648843

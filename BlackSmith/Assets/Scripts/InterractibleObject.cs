@@ -23,9 +23,9 @@ public class InterractibleObject : MonoBehaviour
 
             GameObject.Find("Canvas").SetActive(true);
         }
-    }*/
+    }
 
-/*    void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if(other.tag == "Player")
         {

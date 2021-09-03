@@ -18,6 +18,12 @@ public class OnClickOnObjectGoto : MonoBehaviour
         //Debug.Log("J'ai Cliqué " + gameObject.name);
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
         doGoto.isClickeed(gotoPosition.transform);
+
+        if(gotoPosition.tag == "Thief")
+        {
+            Debug.Log("Thief");
+        }
+
     }
 }
 

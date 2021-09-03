@@ -76,10 +76,10 @@ public class Camera_Controller : MonoBehaviour
                 cameraDragging = true;
             }
          
-            if (Input.GetMouseButtonDown(0))
+/*            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("LevelSize : "+ levelSize +" | Left : " + left + " | Right : " + right + " | Mouse position : "+ mousePosition.x + " | border Left : "+ outerLeft +" | border Right : "+ outerRight);
-            }
+            }*/
             if (cameraDragging) 
             {
              
