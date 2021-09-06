@@ -13,7 +13,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
        // gotoPosition = gameObject;
     }
         
-    void OnMouseDown()
+    public void OnMouseDown()
     {
         //Debug.Log("J'ai Cliqué " + gameObject.name);
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
@@ -23,7 +23,6 @@ public class OnClickOnObjectGoto : MonoBehaviour
         {
             Debug.Log("Thief");
         }
-
     }
 }
 
