@@ -98,9 +98,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSpeed: 0.2
   cameraDragging: 1
-  State2: 0
+  levelSize: 0
   outerLeft: -30
   outerRight: 30
+  BackGroundBig: {fileID: 0}
+  MiddleGroundBig: {fileID: 0}
+  BackGroundMiddle: {fileID: 0}
+  MiddleGroundMiddle: {fileID: 0}
+  BackGroundLittle: {fileID: 0}
+  MiddleGroundLittle: {fileID: 0}
   target: {fileID: 0}
   smoothing: 5
   lowY: -25

@@ -8,6 +8,7 @@ public class Player_Controller : MonoBehaviour
     public float speed;
     public bool isMoving = false;
     public bool canMove = true;
+    public bool isAtDestination = false;
     public bool facingRight;
     public Transform initialPosition;
     public bool isTaskFinished = false;
@@ -21,6 +22,8 @@ public class Player_Controller : MonoBehaviour
     public AudioClip smokeSound;
     public AudioClip ferrierSound;
     public AudioClip forgingSound;
+    public GameObject objectToForgePrefab;
+    public GameObject objectToForgeSlot;
 
 
     // Start is called before the first frame update
@@ -68,6 +71,7 @@ public class Player_Controller : MonoBehaviour
         
     IEnumerator goTo(Transform destPosition)
     {
+            isAtDestination = false;
             yield return new WaitForSeconds(.01f);
             
             while (initialPosition.transform.position.x != destPosition.position.x)
@@ -78,6 +82,10 @@ public class Player_Controller : MonoBehaviour
             yield return new WaitForEndOfFrame();
             }
             isMoving = false;
+            if(facingRight == true)
+            {
+                flip();
+            }
     }
 
         public void flip()

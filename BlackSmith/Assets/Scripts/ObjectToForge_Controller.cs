@@ -9,17 +9,47 @@ public class ObjectToForge_Controller : MonoBehaviour
     public int objectID;
     public string objectName;
     public int objectStepMax;
+    public int[] steps;
+    public int currentStep;
+    public int currentStepValue;
+    private bool isFinished;
+    //public GameObject failAnim;
+    public bool doDestroyObject;
+    Animator myAnim;
 
     // Start is called before the first frame update
     void Start()
     {
+        myAnim = GetComponent<Animator>();
+        doDestroyObject = false;
+        isFinished = false;
+        currentStep = 0;
+        currentStepValue = 0;
+        //failAnim.SetActive(false);
         //set the first sprite
-        gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[1]; 
+        gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[0]; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(doDestroyObject == true)
+        Destroy(gameObject);
+    }
+
+    public void GoNextStep()
+    {
+        if (currentStep < steps.Length-1)
+        {
+            currentStep ++;
+            currentStepValue = steps[currentStep];
+            gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep]; 
+        }
+        else
+        {
+//          failAnim.SetActive(true);
+            myAnim.SetTrigger("toDestroy");
+
+        }
     }
 }
