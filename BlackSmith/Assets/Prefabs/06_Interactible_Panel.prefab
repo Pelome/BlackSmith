@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1635725773
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1635725774}
+  m_Layer: 0
+  m_Name: Action_Position
+  m_TagString: Untagged
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1635725774
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1635725773}
+  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.47, y: 0.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8021490294164693948}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8021490293528648942
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +131,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 8988621687123879679, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -336,7 +366,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: -8151615092473205008, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -529,7 +559,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 36442514687755891, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -555,7 +585,7 @@ GameObject:
   - component: {fileID: 8021490294164693950}
   m_Layer: 0
   m_Name: 06_Interactible_Panel
-  m_TagString: Untagged
+  m_TagString: Pannel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -567,7 +597,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8021490294164693946}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.5, y: -0.019889427, z: 1.4046117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -577,6 +607,7 @@ Transform:
   - {fileID: 8021490293528648943}
   - {fileID: 8021490294372713853}
   - {fileID: 8021490294905523481}
+  - {fileID: 1635725774}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -592,8 +623,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb6b79cec22c2849bd6b7fa5c347662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotoPosition: {fileID: 8021490294164693946}
+  gotoPosition: {fileID: 1635725773}
   myPlayer: {fileID: 0}
+  step: 6
+  currentObjectToForge: {fileID: 0}
 --- !u!61 &8021490294164693950
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -607,7 +640,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2574275}
+  m_Offset: {x: -0.47461843, y: 0.03716308}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -618,7 +651,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.514855}
+  m_Size: {x: 0.05076313, y: 0.34839523}
   m_EdgeRadius: 0
 --- !u!1 &8021490294370945022
 GameObject:
@@ -1056,7 +1089,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -825778320214100194, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1139,7 +1172,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 1270411181061350777, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

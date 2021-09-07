@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Thief
   - Anvil
+  - Cart
+  - FireBowl
+  - Barrel
+  - Stash
+  - Pannel
+  - Horse
   layers:
   - Default
   - TransparentFX
@@ -61,11 +67,11 @@ TagManager:
   - name: Pnj
     uniqueID: 1399066129
     locked: 0
-  - name: Player
-    uniqueID: 2879648843
-    locked: 0
   - name: interactible
     uniqueID: 145129111
+    locked: 0
+  - name: Player
+    uniqueID: 2879648843
     locked: 0
   - name: UI
     uniqueID: 2148097339

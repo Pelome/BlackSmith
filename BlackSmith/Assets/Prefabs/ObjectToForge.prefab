@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1415318453
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: be4a4ff98d70c5c45bd1e2d5e5b67016, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -109,10 +109,10 @@ MonoBehaviour:
   objectID: 100000
   objectName: Object_Default
   objectStepMax: 4
-  steps: 02000000030000000400000006000000
+  steps: 01000000020000000300000004000000
   currentStep: 3
   currentStepValue: 6
-  failAnim: {fileID: 0}
+  doDestroyObject: 0
 --- !u!95 &3246550974359333063
 Animator:
   serializedVersion: 3

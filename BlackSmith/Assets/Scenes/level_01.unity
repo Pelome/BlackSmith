@@ -32308,7 +32308,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 5
   m_Sprite: {fileID: -6384066341393380751, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -34442,6 +34442,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 127323703266625283, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
+      propertyPath: m_Size.x
+      value: 0.31994343
+      objectReference: {fileID: 0}
+    - target: {fileID: 127323703266625283, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7915114
+      objectReference: {fileID: 0}
+    - target: {fileID: 127323703266625283, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0032658577
+      objectReference: {fileID: 0}
+    - target: {fileID: 127323703266625283, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.12672377
+      objectReference: {fileID: 0}
     - target: {fileID: 128252240158470636, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
       propertyPath: m_Name
       value: Player
@@ -34490,6 +34506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7885980277368134387, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
+      propertyPath: speed
+      value: 0.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e93f61e308fc08b439006f17d87cb235, type: 3}
 --- !u!1001 &248846380682286850
@@ -34499,14 +34519,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1742665203}
     m_Modifications:
-    - target: {fileID: 248846380278012064, guid: 30dab9c247b220249996d1f3e4228f0b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 248846380278012065, guid: 30dab9c247b220249996d1f3e4228f0b, type: 3}
-      propertyPath: step
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 248846380278012065, guid: 30dab9c247b220249996d1f3e4228f0b, type: 3}
       propertyPath: myPlayer
       value: 
@@ -34653,14 +34665,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1742665203}
     m_Modifications:
-    - target: {fileID: 2857483680978707482, guid: 2aadffb902a30e148a796056b2429f7b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2857483680978707483, guid: 2aadffb902a30e148a796056b2429f7b, type: 3}
-      propertyPath: step
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2857483680978707483, guid: 2aadffb902a30e148a796056b2429f7b, type: 3}
       propertyPath: myPlayer
       value: 
@@ -34753,8 +34757,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: 03_Interactible_Anvil
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2857483680978707481, guid: 2aadffb902a30e148a796056b2429f7b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aadffb902a30e148a796056b2429f7b, type: 3}
 --- !u!1001 &4099163536932679878
 PrefabInstance:
@@ -34763,10 +34766,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1742665203}
     m_Modifications:
-    - target: {fileID: 4099163537763716170, guid: b5372d9fc3065104889af1b0c556f5d0, type: 3}
-      propertyPath: step
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4099163537763716170, guid: b5372d9fc3065104889af1b0c556f5d0, type: 3}
       propertyPath: myPlayer
       value: 
@@ -34819,12 +34818,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: 01_Interactible_Cart
       objectReference: {fileID: 0}
-    - target: {fileID: 4099163537763716173, guid: b5372d9fc3065104889af1b0c556f5d0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4099163537763716168, guid: b5372d9fc3065104889af1b0c556f5d0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5372d9fc3065104889af1b0c556f5d0, type: 3}
 --- !u!1001 &6034494831844926187
 PrefabInstance:
@@ -34835,11 +34829,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6034494831924226467, guid: b9a257a188fd23b49af3621592aed506, type: 3}
       propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6034494831924226476, guid: b9a257a188fd23b49af3621592aed506, type: 3}
-      propertyPath: step
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6034494831924226476, guid: b9a257a188fd23b49af3621592aed506, type: 3}
       propertyPath: myPlayer
@@ -34948,7 +34938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6045223854917080394, guid: 8b2af2a00a6ee274aa38d6f7ed919db8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6045223854917080395, guid: 8b2af2a00a6ee274aa38d6f7ed919db8, type: 3}
       propertyPath: myPlayer
@@ -35019,8 +35009,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8766330925411347653, guid: 0e7c2a9e7a107984284268f0cecb081a, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e7c2a9e7a107984284268f0cecb081a, type: 3}
 --- !u!4 &6344372457813229821 stripped
 Transform:
@@ -35088,7 +35077,7 @@ PrefabInstance:
       objectReference: {fileID: 1122053377423081}
     - target: {fileID: 8021490294164693950, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}

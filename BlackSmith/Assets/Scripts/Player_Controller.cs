@@ -48,7 +48,7 @@ public class Player_Controller : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPosition.x,0,0), step);*/
     }
 
-    public void isClickeed(Transform destPosition)
+    public void isClickeed(Transform destPosition, GameObject destinationObject)
     {
         if (!isMoving && canMove)
         {
@@ -65,11 +65,11 @@ public class Player_Controller : MonoBehaviour
             //taskProgress = 0;
             //progressTaskSlider.gameObject.SetActive(false);
             //playerAS.Stop();
-            StartCoroutine (goTo(destPosition));
+            StartCoroutine (goTo(destPosition,destinationObject));
         }
     }
         
-    IEnumerator goTo(Transform destPosition)
+    IEnumerator goTo(Transform destPosition, GameObject destinationObject)
     {
             isAtDestination = false;
             yield return new WaitForSeconds(.01f);
@@ -86,6 +86,8 @@ public class Player_Controller : MonoBehaviour
             {
                 flip();
             }
+            destinationObject.GetComponent<OnClickOnObjectGoto>().IamAtDestination();
+
     }
 
         public void flip()

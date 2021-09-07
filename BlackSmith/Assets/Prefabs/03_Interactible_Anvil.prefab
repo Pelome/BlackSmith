@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 2857483680978707485}
   - component: {fileID: 2857483680978707483}
   - component: {fileID: 2857483680978707482}
-  - component: {fileID: 2857483680978707481}
   m_Layer: 0
   m_Name: 03_Interactible_Anvil
   m_TagString: Anvil
@@ -226,7 +225,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857483680978707486}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.4046117}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -253,8 +252,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eb6b79cec22c2849bd6b7fa5c347662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gotoPosition: {fileID: 2857483680978707486}
+  gotoPosition: {fileID: 2857483681717788429}
   myPlayer: {fileID: 0}
+  step: 3
+  currentObjectToForge: {fileID: 0}
 --- !u!61 &2857483680978707482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -262,13 +263,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2857483680978707486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25742748}
+  m_Offset: {x: 0.7602818, y: -0.000032633543}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -279,16 +280,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5148549}
+  m_Size: {x: 0.12217951, y: 0.33946806}
   m_EdgeRadius: 0
---- !u!222 &2857483680978707481
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2857483680978707486}
-  m_CullTransparentMesh: 1
 --- !u!1 &2857483681686438903
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +425,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2857483681717788428}
   m_Layer: 0
-  m_Name: Forge_Position
+  m_Name: Action_Position
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -601,7 +594,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 5803455356149086885, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

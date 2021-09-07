@@ -47,9 +47,14 @@ public class ObjectToForge_Controller : MonoBehaviour
         }
         else
         {
-//          failAnim.SetActive(true);
-            myAnim.SetTrigger("toDestroy");
-
+            DestroyThisObject();
         }
+    }
+
+    public void DestroyThisObject()
+    {
+        //failAnim.SetActive(true);
+        myAnim.SetTrigger("toDestroy");
+
     }
 }
