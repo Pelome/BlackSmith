@@ -12,7 +12,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     public int[] steps;
     public int currentStep;
     public int currentStepValue;
-    private bool isFinished;
+    //private bool isFinished;
     //public GameObject failAnim;
     public bool doDestroyObject;
     Animator myAnim;
@@ -22,9 +22,10 @@ public class ObjectToForge_Controller : MonoBehaviour
     {
         myAnim = GetComponent<Animator>();
         doDestroyObject = false;
-        isFinished = false;
+        //isFinished = false;
         currentStep = 0;
         currentStepValue = 0;
+        objectStepMax = steps.Length;
         //failAnim.SetActive(false);
         //set the first sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[0]; 

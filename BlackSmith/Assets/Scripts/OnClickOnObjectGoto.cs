@@ -44,15 +44,31 @@ public class OnClickOnObjectGoto : MonoBehaviour
         if (currentObjectToForge != null)
         {
             ObjectToForge_Controller objectToCraftScript = currentObjectToForge.GetComponent<ObjectToForge_Controller>();
-            Debug.Log("Item Step : " + objectToCraftScript.currentStep + " | InterractibleObjectStep : " + step + " | StepSuivant : " + objectToCraftScript.steps[objectToCraftScript.currentStep +1] );
-            if(objectToCraftScript.steps[objectToCraftScript.currentStep] == objectToCraftScript.steps.Length)
-            {
-                objectToCraftScript.GoNextStep();   
-            }
+            Debug.Log("Item Step : " + objectToCraftScript.currentStep + " | InterractibleObjectStep : " + step + " | StepSuivant : " + objectToCraftScript.steps[objectToCraftScript.currentStep +1] + " | Length" + objectToCraftScript.steps.Length);
+            //if(objectToCraftScript.steps[objectToCraftScript.currentStep] == objectToCraftScript.steps.Length)
+            //{
+                //you can go to stash
+              //  objectToCraftScript.GoNextStep();   
+            //}
 
-            if(objectToCraftScript.steps[objectToCraftScript.currentStep +1] == step)
+            //if index is outside the boud of array
+
+
+            //Debugger cette ligne
+            if(objectToCraftScript.steps[objectToCraftScript.currentStep]+1 >= objectToCraftScript.steps.Length)
             {
+                Debug.Log("Index depasse");
+            }
+            else
+            {
+                if(objectToCraftScript.steps[objectToCraftScript.currentStep +1] == step)
+                {
                 objectToCraftScript.GoNextStep();
+                }
+                else
+                {
+                    objectToCraftScript.DestroyThisObject();
+                }
             }
         }
         if(gameObject.tag == "Cart")
