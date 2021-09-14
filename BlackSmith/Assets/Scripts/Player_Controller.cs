@@ -11,7 +11,7 @@ public class Player_Controller : MonoBehaviour
     public bool isAtDestination = false;
     public bool facingRight;
     public Transform initialPosition;
-    public bool isTaskFinished = false;
+    //public bool isTaskFinished = false;
     //public float taskProgressMax = 100;
    // public float taskProgress = 0;
     //public Slider progressTaskSlider;
@@ -24,34 +24,49 @@ public class Player_Controller : MonoBehaviour
     public AudioClip forgingSound;
     public GameObject objectToForgePrefab;
     public GameObject objectToForgeSlot;
+    public Transform target;
+    public GameObject objectToReach;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         playerAS = GetComponent<AudioSource>();
         myAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         myAnim.SetBool("isMoving",isMoving);
-
-/*        float step = speed * Time.deltaTime;
-
-        //if(Input.GetKeyDown(KeyCode.Mouse0))
+        if(target != null)
         {
-            //targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            isMoving = true;
+            // Move Our Position a step closet to the current Target
+            float step  = speed * Time.deltaTime; // calculate distance to move
+            transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+            //check if arrived at position
+            if (Vector3.Distance(transform.position, target.position)< 0.001f)
+            {
+                if(target != null)
+                {
+                    if(facingRight == true )
+                    {
+                        flip();
+                    }
+                    objectToReach.GetComponent<OnClickOnObjectGoto>().IamAtDestination();
+                    target = null;
+                    isMoving = false;
+                }
+            }
         }
-        
-        transform.position = Vector3.MoveTowards(transform.position, new Vector3(targetPosition.x,0,0), step);*/
     }
 
     public void isClickeed(Transform destPosition, GameObject destinationObject)
     {
+        target = destPosition;
+        objectToReach = destinationObject;
         if (!isMoving && canMove)
         {
+
             if(destPosition.transform.position.x < initialPosition.transform.position.x && facingRight)
             {
                 flip();
@@ -60,37 +75,14 @@ public class Player_Controller : MonoBehaviour
             {
                 flip();
             }
-            
-            isTaskFinished = false;
+            //isTaskFinished = false;
             //taskProgress = 0;
             //progressTaskSlider.gameObject.SetActive(false);
             //playerAS.Stop();
-            StartCoroutine (goTo(destPosition,destinationObject));
         }
     }
-        
-    IEnumerator goTo(Transform destPosition, GameObject destinationObject)
-    {
-            isAtDestination = false;
-            yield return new WaitForSeconds(.01f);
-            
-            while (initialPosition.transform.position.x != destPosition.position.x)
-            {
-            initialPosition.transform.position = Vector3.MoveTowards(new Vector2(initialPosition.transform.position.x,initialPosition.transform.position.y), new Vector2(destPosition.position.x,initialPosition.transform.position.y), speed);
-            isMoving = true;
 
-            yield return new WaitForEndOfFrame();
-            }
-            isMoving = false;
-            if(facingRight == true)
-            {
-                flip();
-            }
-            destinationObject.GetComponent<OnClickOnObjectGoto>().IamAtDestination();
-
-    }
-
-        public void flip()
+    public void flip()
     {
         facingRight = !facingRight;
         Vector3 theScale = transform.localScale;
@@ -100,31 +92,4 @@ public class Player_Controller : MonoBehaviour
         //sliderScale.x *= -1;
         //progressTaskSlider.transform.localScale = sliderScale;
     }
-
-    void ActionForge()
-    {
-        //if(!isMoving)
-        //{
-/*            if(taskProgress >= taskProgressMax)
-            {   
-                isWaterForging = false;
-                isTaskFinished = true;
-                progressTaskSlider.gameObject.SetActive(false);
-            }
-            else
-            {*/
-                //Instantiate(forgeWaterCool, forgeWaterTip.transform.position, Quaternion.Euler(new Vector3(0, 0, 0)));
-                playerAS.PlayOneShot(forgeHitSound);
-            //}
-            // Destroy(objectToForge);
-            // objectToForge = (GameObject)Instantiate(itemToForge,itemToForgePos);
-            // objectToForgeSprite = objectToForge.GetComponent<SpriteRenderer>();
-            // objectToForgeSprite.sortingOrder = 10;
-        //}
-    }
-
-    
-
-
-        
 }

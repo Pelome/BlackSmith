@@ -12,6 +12,8 @@ TagManager:
   - Stash
   - Pannel
   - Horse
+  - PorteChateau
+  - QuestPannel
   layers:
   - Default
   - TransparentFX

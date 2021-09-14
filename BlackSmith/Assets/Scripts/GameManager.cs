@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private int objectCraftStepMax;
     private int objectCraftStep;
 
+    public FloatingTextManager floatingTextManager;
+
 
     private void Awake()
     {
@@ -48,6 +50,12 @@ public class GameManager : MonoBehaviour
         objectToCraftID = objectToCraftScript.objectID;
         objectToCraftName = objectToCraftScript.objectName;
         objectCraftStepMax = objectToCraftScript.objectStepMax;
+    }
+
+    //FloatingText
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
     }
 
     public int GetCurrentGold()

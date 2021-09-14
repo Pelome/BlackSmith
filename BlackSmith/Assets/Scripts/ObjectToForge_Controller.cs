@@ -15,6 +15,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     //private bool isFinished;
     //public GameObject failAnim;
     public bool doDestroyObject;
+    public GameObject iconInStack;
     Animator myAnim;
 
     // Start is called before the first frame update
@@ -40,7 +41,7 @@ public class ObjectToForge_Controller : MonoBehaviour
 
     public void GoNextStep()
     {
-        if (currentStep < steps.Length-1)
+        if (currentStep < steps.Length)
         {
             currentStep ++;
             currentStepValue = steps[currentStep];
