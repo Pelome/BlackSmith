@@ -55,6 +55,22 @@ public class Player_Controller : MonoBehaviour
                     objectToReach.GetComponent<OnClickOnObjectGoto>().IamAtDestination();
                     target = null;
                     isMoving = false;
+                    if (objectToReach.tag == "Anvil")
+                    {
+                        myAnim.SetTrigger("Anvil");
+                    }
+                    if (objectToReach.tag == "Barrel")
+                    {
+                        myAnim.SetTrigger("Barrel");
+                    }
+                    if (objectToReach.tag == "Horse")
+                    {
+                        myAnim.SetTrigger("Horse");
+                    }
+                    if (objectToReach.tag == "FireBowl")
+                    {
+                        myAnim.SetTrigger("FireBowl");
+                    }
                 }
             }
         }

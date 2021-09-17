@@ -45,7 +45,7 @@ public class ObjectToForge_Controller : MonoBehaviour
         {
             currentStep ++;
             currentStepValue = steps[currentStep];
-            gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep]; 
+            gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep];
         }
         else
         {

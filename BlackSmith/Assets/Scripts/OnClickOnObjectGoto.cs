@@ -34,8 +34,6 @@ public class OnClickOnObjectGoto : MonoBehaviour
             {
                 objectToCraftScript.DestroyThisObject();
                 //put object to Stash
-                
-
             }
             else
             {
