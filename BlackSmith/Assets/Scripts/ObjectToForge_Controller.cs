@@ -17,10 +17,12 @@ public class ObjectToForge_Controller : MonoBehaviour
     public bool doDestroyObject;
     public GameObject iconInStack;
     Animator myAnim;
+    public GameObject stash;
 
     // Start is called before the first frame update
     void Start()
     {
+        stash = GameObject.Find("Interactible_Stash");
         myAnim = GetComponent<Animator>();
         doDestroyObject = false;
         //isFinished = false;
@@ -41,16 +43,24 @@ public class ObjectToForge_Controller : MonoBehaviour
 
     public void GoNextStep()
     {
+        if(currentStep == steps.Length -1)
+        {
+            Stash_Inventory stashScript = stash.gameObject.GetComponent<Stash_Inventory>();
+            stashScript.AddItemToStash(gameObject);
+            DestroyThisObject();
+        }
         if (currentStep < steps.Length)
         {
             currentStep ++;
             currentStepValue = steps[currentStep];
             gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep];
+
         }
         else
         {
             DestroyThisObject();
         }
+        Debug.Log("currentStep : "+currentStep +" | steps.Length : "+ steps.Length);
     }
 
     public void DestroyThisObject()

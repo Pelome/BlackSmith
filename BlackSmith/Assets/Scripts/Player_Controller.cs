@@ -57,18 +57,23 @@ public class Player_Controller : MonoBehaviour
                     isMoving = false;
                     if (objectToReach.tag == "Anvil")
                     {
+                        //trouver ici le systeme pour donner le ton par défaut.
+                        playerAS.clip = forgeHitSound;
                         myAnim.SetTrigger("Anvil");
                     }
                     if (objectToReach.tag == "Barrel")
                     {
+                        playerAS.clip = smokeSound;
                         myAnim.SetTrigger("Barrel");
                     }
                     if (objectToReach.tag == "Horse")
                     {
+                        playerAS.clip = ferrierSound;
                         myAnim.SetTrigger("Horse");
                     }
                     if (objectToReach.tag == "FireBowl")
                     {
+                        //playerAS.clip = forgingSound;
                         myAnim.SetTrigger("FireBowl");
                     }
                 }

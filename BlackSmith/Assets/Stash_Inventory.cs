@@ -30,15 +30,17 @@ public class Stash_Inventory : MonoBehaviour
         
     }
 
-    public void AddItemToStash(/*GameObject itemToAdd*/)
+    public void AddItemToStash(GameObject itemToAddInStash)
     {
         for (int i =0 ; i < slotsPos.Length; i++)
         {
             if(slots[i] == null)
             {
                 positionToAdd = i;
+                itemToAdd = itemToAddInStash;
                 slots[positionToAdd] = itemToAdd;
                 slotsPos[positionToAdd].GetComponent<Image>().sprite = itemToAdd.GetComponent<SpriteRenderer>().sprite;
+                Debug.Log("I Put in stack");
                 return;
             }
         }
