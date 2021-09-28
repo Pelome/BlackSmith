@@ -21,13 +21,13 @@ public class castlePNJ_Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Timer -= Time.deltaTime;
-         if (Timer <= 0f)
-         {
+        Timer -= Time.deltaTime;
+        if (Timer <= 0f)
+        {
             SpawnPnj();
 
             Timer = 5f;
-         }
+        }
      
     }
 
@@ -42,11 +42,11 @@ public class castlePNJ_Spawner : MonoBehaviour
 
     IEnumerator delayDoor()
     {
-            yield return new WaitForSeconds(.6f);
+        yield return new WaitForSeconds(.6f);
             
         castleDoor.gameObject.GetComponent<SpriteRenderer>().sprite = doorClose;
 
-            yield return new WaitForEndOfFrame();
+        yield return new WaitForEndOfFrame();
     }
 
 }

@@ -32,6 +32,7 @@ public class PNJ_Controller : MonoBehaviour
     public GameObject CheerAward;
     public GameObject destPosition; // peut etre private
     public GameObject panelPosition; // peut etre private
+    public GameObject stashPosition; // peut etre private
     public GameObject exitPosition; // peut etre private
     public Transform initialPosition;
     public AudioClip questPosingSound;
@@ -47,9 +48,20 @@ public class PNJ_Controller : MonoBehaviour
         playerAS = GetComponent<AudioSource>();
         facingRight = true;
         panelPosition = GameObject.FindWithTag("QuestPannel");
+        stashPosition = GameObject.FindWithTag("Stash");
         exitPosition = GameObject.FindWithTag("PorteChateau");
-        destPosition = panelPosition;
-        GoToPanel();
+        
+        if (gameObject.tag == "Page")
+        {
+            destPosition = panelPosition;
+        }
+
+        if (gameObject.tag == "Thief")
+        {
+            destPosition = stashPosition;
+        }
+
+        GoToGoal();
     }   
 
     void Update()
@@ -60,7 +72,7 @@ public class PNJ_Controller : MonoBehaviour
         //myAnim.SetBool("isGrogning", isGrogning);           
     }
 
-    public void GoToPanel()
+    public void GoToGoal()
     {
          if (!isMoving && canMove)// peut etre inutile
          {
