@@ -33819,7 +33819,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 145129111
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 5
   m_Sprite: {fileID: -6384066341393380751, guid: 59d957dc36aaa3349a4c0c0fea508022, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -37273,6 +37273,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: 05_Interactible_Stash
       objectReference: {fileID: 0}
+    - target: {fileID: 6045223856226529320, guid: 8b2af2a00a6ee274aa38d6f7ed919db8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045223856226529320, guid: 8b2af2a00a6ee274aa38d6f7ed919db8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b2af2a00a6ee274aa38d6f7ed919db8, type: 3}
 --- !u!1001 &6344372457813229820
@@ -37449,6 +37457,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1742665203}
     m_Modifications:
+    - target: {fileID: 8021490293677797124, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490293677797124, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490293677797124, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490293897719774, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490293897719774, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490293897719774, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490294154103911, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490294154103911, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490294154103911, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
     - target: {fileID: 8021490294164693946, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
       propertyPath: m_Name
       value: 06_Interactible_Panel
@@ -37501,5 +37545,25 @@ PrefabInstance:
       propertyPath: myPlayer
       value: 
       objectReference: {fileID: 1122053377423081}
+    - target: {fileID: 8021490294908983487, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490294908983487, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490295196475615, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490295196475615, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8021490295196475615, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2044344943
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54006238322902d4faa3ef50997bb2c3, type: 3}

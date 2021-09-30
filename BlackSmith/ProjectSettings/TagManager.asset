@@ -67,14 +67,17 @@ TagManager:
   - name: Horse
     uniqueID: 2846790467
     locked: 0
+  - name: interactibleBehind
+    uniqueID: 2044344943
+    locked: 0
   - name: Pnj
     uniqueID: 1399066129
     locked: 0
-  - name: interactible
-    uniqueID: 145129111
-    locked: 0
   - name: Player
     uniqueID: 2879648843
+    locked: 0
+  - name: interactible
+    uniqueID: 145129111
     locked: 0
   - name: UI
     uniqueID: 2148097339
