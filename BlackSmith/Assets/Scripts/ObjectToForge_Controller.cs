@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ObjectToForge_Controller : MonoBehaviour
 {
-
     public Sprite[] objectSprites;
     public int objectID;
     public string objectName;
@@ -13,7 +12,6 @@ public class ObjectToForge_Controller : MonoBehaviour
     public int currentStep;
     public int currentStepValue;
     //private bool isFinished;
-    //public GameObject failAnim;
     public bool doDestroyObject;
     public GameObject iconInStack;
     Animator myAnim;
@@ -29,7 +27,6 @@ public class ObjectToForge_Controller : MonoBehaviour
         currentStep = 0;
         currentStepValue = 0;
         objectStepMax = steps.Length;
-        //failAnim.SetActive(false);
         //set the first sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[0]; 
     }
@@ -54,7 +51,6 @@ public class ObjectToForge_Controller : MonoBehaviour
             currentStep ++;
             currentStepValue = steps[currentStep];
             gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep];
-
         }
         else
         {
@@ -68,6 +64,5 @@ public class ObjectToForge_Controller : MonoBehaviour
         //failAnim.SetActive(true);
         Debug.Log("Object Détruit");
         myAnim.SetTrigger("toDestroy");
-
     }
 }

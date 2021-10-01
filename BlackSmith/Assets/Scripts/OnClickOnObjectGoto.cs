@@ -11,9 +11,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
     public GameObject currentObjectToForge;
 
     void Start()
-    {
-
-    }
+    {}
         
     public void itemIsClicked()
     {
@@ -35,6 +33,11 @@ public class OnClickOnObjectGoto : MonoBehaviour
             {
                 objectToCraftScript.DestroyThisObject();
                 //put object to Stash
+                if(gameObject.tag == "Stash")
+                {
+                    Debug.Log("Put Object To Stash");
+                    gameObject.GetComponent<Stash_Inventory>().AddItemToStash(currentObjectToForge);
+                }
             }
             else
             {
