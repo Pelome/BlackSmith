@@ -60,12 +60,13 @@ public class ObjectToForge_Controller : MonoBehaviour
         {
             DestroyThisObject();
         }
-        Debug.Log("currentStep : "+currentStep +" | steps.Length : "+ steps.Length);
+        Debug.Log("currentStep : "+currentStep +" | steps.Value : "+ steps[currentStep] +" | steps.Length : "+ steps.Length);
     }
 
     public void DestroyThisObject()
     {
         //failAnim.SetActive(true);
+        Debug.Log("Object Détruit");
         myAnim.SetTrigger("toDestroy");
 
     }

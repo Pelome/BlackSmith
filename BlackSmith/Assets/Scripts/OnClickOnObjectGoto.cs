@@ -17,6 +17,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
         
     public void itemIsClicked()
     {
+        Debug.Log("J'ai cliqué sur : " + gameObject.name);
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
         doGoto.isClickeed(gotoPosition.transform, gotoPosition.transform.parent.gameObject);
         return;
@@ -37,17 +38,20 @@ public class OnClickOnObjectGoto : MonoBehaviour
             }
             else
             {
-                if(objectToCraftScript.steps[objectToCraftScript.currentStep +1] == step)
+                //corriger ici car on compare un index avec une valeur
+                if(objectToCraftScript.steps[objectToCraftScript.currentStep +1 ] == step)
                 {
                 objectToCraftScript.GoNextStep();
                 }
                 else
                 {
+                    Debug.Log("je vais detruire cet objet");
                     objectToCraftScript.DestroyThisObject();
                 }
             }
         }
 
+        //Ici les restrictions par object
         if(gameObject.tag == "Cart")
         {
             if (currentObjectToForge == null)

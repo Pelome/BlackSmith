@@ -46,6 +46,7 @@ public class Player_Controller : MonoBehaviour
             //check if arrived at position
             if (Vector3.Distance(transform.position, target.position)< 0.001f)
             {
+                Debug.Log("JesuisArrivé");
                 if(target != null)
                 {
                     if(facingRight == true )
@@ -57,24 +58,40 @@ public class Player_Controller : MonoBehaviour
                     isMoving = false;
                     if (objectToReach.tag == "Anvil")
                     {
+                        Debug.Log("Je suis a anvil");
                         //trouver ici le systeme pour donner le ton par défaut.
                         playerAS.clip = forgeHitSound;
                         myAnim.SetTrigger("Anvil");
                     }
                     if (objectToReach.tag == "Barrel")
                     {
+                        Debug.Log("Je suis a Barrel");
                         playerAS.clip = smokeSound;
                         myAnim.SetTrigger("Barrel");
                     }
                     if (objectToReach.tag == "Horse")
                     {
+                        Debug.Log("Je suis a Horse");
                         playerAS.clip = ferrierSound;
                         myAnim.SetTrigger("Horse");
                     }
                     if (objectToReach.tag == "FireBowl")
                     {
+                        Debug.Log("Je suis a FireBowl");
                         //playerAS.clip = forgingSound;
                         myAnim.SetTrigger("FireBowl");
+                    }
+                    if (objectToReach.tag == "Pannel")
+                    {
+                        Debug.Log("Je suis a Pannel");
+                        //playerAS.clip = forgingSound;
+                        //myAnim.SetTrigger("FireBowl");
+                    }
+                    if (objectToReach.tag == "Stash")
+                    {
+                        Debug.Log("Je suis a Stash");
+                        //playerAS.clip = forgingSound;
+                        //myAnim.SetTrigger("FireBowl");
                     }
                 }
             }
@@ -83,6 +100,7 @@ public class Player_Controller : MonoBehaviour
 
     public void isClickeed(Transform destPosition, GameObject destinationObject)
     {
+        //a quoçi sert ce script a part le flip, c'est dans l'update que se fait le mouvement tout le temps, ici se regle la variable target
         target = destPosition;
         objectToReach = destinationObject;
         if (!isMoving && canMove)
