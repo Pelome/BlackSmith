@@ -1594,13 +1594,14 @@ MonoBehaviour:
   isAtDestination: 0
   facingRight: 0
   initialPosition: {fileID: 129248456212401346}
-  isTaskFinished: 0
   forgeHitSound: {fileID: 8300000, guid: 6fa4b606e8479b14db99314789960598, type: 3}
   smokeSound: {fileID: 8300000, guid: d5345a04b6ec78b4f92e29748891ae81, type: 3}
   ferrierSound: {fileID: 8300000, guid: a6c33809cd119fd4b9692a5d39767431, type: 3}
   forgingSound: {fileID: 8300000, guid: 6fa4b606e8479b14db99314789960598, type: 3}
   objectToForgePrefab: {fileID: 2571462997282751200, guid: 776cf988458347a4680459805b803f6c, type: 3}
   objectToForgeSlot: {fileID: 5051992253044469866}
+  target: {fileID: 0}
+  objectToReach: {fileID: 0}
 --- !u!114 &127323703266625292
 MonoBehaviour:
   m_ObjectHideFlags: 0
