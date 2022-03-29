@@ -868,7 +868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotoPosition: {fileID: 272395060}
   myPlayer: {fileID: 0}
-  step: 7
+  step: 8
   currentObjectToForge: {fileID: 0}
 --- !u!61 &8405562971671566996
 BoxCollider2D:

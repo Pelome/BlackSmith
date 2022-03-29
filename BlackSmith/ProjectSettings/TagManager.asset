@@ -15,6 +15,7 @@ TagManager:
   - PorteChateau
   - QuestPannel
   - Page
+  - Meule
   layers:
   - Default
   - TransparentFX

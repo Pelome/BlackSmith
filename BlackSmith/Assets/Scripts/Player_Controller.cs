@@ -22,6 +22,7 @@ public class Player_Controller : MonoBehaviour
     public AudioClip smokeSound;
     public AudioClip ferrierSound;
     public AudioClip forgingSound;
+    public AudioClip grindingSound; 
     public GameObject objectToForgePrefab;
     public GameObject objectToForgeSlot;
     public Transform target;
@@ -80,6 +81,12 @@ public class Player_Controller : MonoBehaviour
                         Debug.Log("Je suis a FireBowl");
                         //playerAS.clip = forgingSound;
                         myAnim.SetTrigger("FireBowl");
+                    }
+                    if (objectToReach.tag == "Meule")
+                    {
+                        Debug.Log("Je suis a Meule");
+                        playerAS.clip = grindingSound;
+                        myAnim.SetTrigger("Meule");
                     }
                     if (objectToReach.tag == "Pannel")
                     {
