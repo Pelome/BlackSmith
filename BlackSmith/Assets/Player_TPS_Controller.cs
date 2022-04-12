@@ -34,11 +34,11 @@ public class Player_TPS_Controller : MonoBehaviour
         //player dash
         if(Input.GetButtonDown("Dash"))
         {
-            Dash(10,10);
+            Dash(1,1);
         }
         
         //player jump
-        if(Input.GetButtonDown("Jump")&& !isGrounded)
+        if(Input.GetButtonDown("Jump")&& isGrounded)
         {
             Jump();
         }
@@ -52,6 +52,7 @@ public class Player_TPS_Controller : MonoBehaviour
 
     private void Jump()
     {
+        Debug.Log("I am jumping");
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += Vector2.up * jumpForce;
     }

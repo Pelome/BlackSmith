@@ -480,7 +480,9 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6752786688051268687, guid: ff49b4b792d84d142afb905cb79fb8a6, type: 3}
+    - {fileID: 3531471691928179120, guid: ff49b4b792d84d142afb905cb79fb8a6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ff49b4b792d84d142afb905cb79fb8a6, type: 3}
 --- !u!1 &3633074020781450616 stripped
 GameObject:
@@ -500,8 +502,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  jumpForce: 10
-  dashSpeed: 50
+  jumpForce: 5
+  dashSpeed: 5
   isGrounded: 0
   groundLayer:
     serializedVersion: 2
