@@ -132,6 +132,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -988,6 +989,43 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TX Tileset Ground Darken_15: 1606139376318834871
+      TX Tileset Ground Darken_7: 7393645236044506413
+      TX Tileset Ground Darken_12: -1024774342087753070
+      TX Tileset Ground Darken_9: 2789482834411495827
+      TX Tileset Ground Darken_23: 7719233602920734349
+      TX Tileset Ground Darken_24: -1499754421530275884
+      TX Tileset Ground Darken_22: 641442476343998266
+      TX Tileset Ground Darken_19: 9101947052690169058
+      TX Tileset Ground Darken_3: 4454929668451368435
+      TX Tileset Ground Darken_6: 817026657815632853
+      TX Tileset Ground Darken_26: -8580704042930919616
+      TX Tileset Ground Darken_30: -815943811441926574
+      TX Tileset Ground Darken_28: 7749677796207038208
+      TX Tileset Ground Darken_1: 3776400002857069758
+      TX Tileset Ground Darken_5: 7874313514683909956
+      TX Tileset Ground Darken_21: 6158509271600707169
+      TX Tileset Ground Darken_32: 1228210343183381380
+      TX Tileset Ground Darken_2: 1832926404367280642
+      TX Tileset Ground Darken_8: -6342360085057714290
+      TX Tileset Ground Darken_14: 616104920212612596
+      TX Tileset Ground Darken_4: 1269300399984003823
+      TX Tileset Ground Darken_13: -646502625063784479
+      TX Tileset Ground Darken_16: -7993042321328826743
+      TX Tileset Ground Darken_25: 7192266972089255590
+      TX Tileset Ground Darken_17: 6343852659141289062
+      TX Tileset Ground Darken_29: 9043475221588554772
+      TX Tileset Ground Darken_0: 4639782543419762215
+      TX Tileset Ground Darken_11: -1056139685357404266
+      TX Tileset Ground Darken_20: 3304056921613830793
+      TX Tileset Ground Darken_31: 5609133781874993153
+      TX Tileset Ground Darken_35: -1812895426087042506
+      TX Tileset Ground Darken_10: 6128382740145553157
+      TX Tileset Ground Darken_27: 3152533501225173622
+      TX Tileset Ground Darken_33: 8131121135224542473
+      TX Tileset Ground Darken_34: -705234573264090123
+      TX Tileset Ground Darken_18: -3042529176944181332
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
