@@ -7,7 +7,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
 {
     public GameObject gotoPosition;
     public GameObject myPlayer;
-    public int step;
+    public int stepValue;
     public GameObject currentObjectToForge;
 
     void Start()
@@ -17,7 +17,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
         
     public void itemIsClicked()
     {
-        Debug.Log("J'ai cliqué sur : " + gameObject.name);
+        Debug.Log("J'ai cliqué sur : " + gameObject.name + " son index est: "+ stepValue);
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
         doGoto.isClickeed(gotoPosition.transform, gotoPosition.transform.parent.gameObject);
         return;
@@ -26,12 +26,13 @@ public class OnClickOnObjectGoto : MonoBehaviour
     public void IamAtDestination()
     {
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
-        currentObjectToForge = GameObject.Find("ObjectToForge(Clone)");  
+        currentObjectToForge = GameObject.FindWithTag("ObjectToForge");  
         if (currentObjectToForge != null)
         {
+            GameManager.instance.stepToGo = 0;
             ObjectToForge_Controller objectToCraftScript = currentObjectToForge.GetComponent<ObjectToForge_Controller>();
-
-            if(objectToCraftScript.steps[objectToCraftScript.currentStep] >= objectToCraftScript.steps.Length && gameObject.tag != "Stash")
+            objectToCraftScript.GoNextStep(stepValue);
+           /* if((objectToCraftScript.steps[objectToCraftScript.currentStep] >= objectToCraftScript.steps.Length) && (gameObject.tag != "Stash"))
             {
                 objectToCraftScript.DestroyThisObject();
                 //put object to Stash
@@ -53,7 +54,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
                     Debug.Log("je vais detruire cet objet");
                     objectToCraftScript.DestroyThisObject();
                 }
-            }
+            }*/
         }
 
         //Ici les restrictions par object

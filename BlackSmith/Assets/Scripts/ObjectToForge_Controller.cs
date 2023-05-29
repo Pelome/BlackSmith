@@ -13,7 +13,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     public int currentStepValue;
     public int goldGranted;
     //private bool isFinished;
-    public bool doDestroyObject;
+/*    public bool doDestroyObject;*/
     public GameObject iconInStack;
     Animator myAnim;
     public GameObject stash;
@@ -24,28 +24,54 @@ public class ObjectToForge_Controller : MonoBehaviour
         //stash = GameObject.Find("Interactible_Stash");
         stash = GameObject.FindWithTag("Stash");
         myAnim = GetComponent<Animator>();
-        doDestroyObject = false;
+        //doDestroyObject = false;
         //isFinished = false;
         currentStep = 0;
         currentStepValue = 0;
         objectStepMax = steps.Length;
         //set the first sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[0]; 
+        Debug.Log("Dernier Step: "+steps[steps.Length-1]);
+        GameManager.instance.stepToGo = steps[1];
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(doDestroyObject == true)
-        Destroy(gameObject);
-        Debug.Log("Dernier Step: "+steps[steps.Length-1]);
+/*        if(doDestroyObject == true)
+        Destroy(gameObject);*/
+        Debug.Log(steps.Length);
+
     }
 
-    public void GoNextStep()
+    public void GoNextStep(int stepValueOfObject)
     {
-        Debug.Log("Dernier Step: "+steps[steps.Length]);
-        if(currentStep == steps.Length -1)
+        currentStep ++;
+        if(currentStep < steps.Length-1)
         {
+            GameManager.instance.stepToGo = steps[currentStep+1];
+        }
+        //Debug.Log("Dernier Step: "+steps[steps.Length-1]+", step cliqué: "+ stepValueOfObject+", step que je suis sencé avoir: "+steps[currentStep]);
+        
+
+        if(stepValueOfObject == steps[currentStep])
+        {
+                if(steps[steps.Length-1] ==stepValueOfObject)
+                {
+                    GameManager.instance.UpdateGold(+goldGranted);
+                    DestroyThisObject();
+                }
+                else
+                {
+                    gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep];
+                }
+        }
+        else
+        {
+            DestroyThisObject();
+        }
+/*        {
             Stash_Inventory stashScript = stash.gameObject.GetComponent<Stash_Inventory>();
             stashScript.AddItemToStash(gameObject);
             GameManager.instance.UpdateGold(+goldGranted);
@@ -66,12 +92,14 @@ public class ObjectToForge_Controller : MonoBehaviour
             DestroyThisObject();
         }
         Debug.Log("currentStep : "+currentStep +" | steps.Value : "+ steps[currentStep] +" | steps.Length : "+ steps.Length);
-    }
+ */   }
 
     public void DestroyThisObject()
     {
         //failAnim.SetActive(true);
         Debug.Log("Object Détruit");
+        GameManager.instance.stepToGo = 0;
         myAnim.SetTrigger("toDestroy");
+        Destroy(gameObject);
     }
 }

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6606848568409734692}
   - component: {fileID: 3246550974359333063}
   m_Layer: 0
-  m_Name: ObjectToForge
-  m_TagString: Untagged
+  m_Name: ObjectToForge_100000
+  m_TagString: ObjectToForge
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,13 +104,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 3663b9b5852af6a459bb94a6519f09d3, type: 3}
   - {fileID: 21300000, guid: be4a4ff98d70c5c45bd1e2d5e5b67016, type: 3}
   objectID: 100000
-  objectName: Object_Default
+  objectName: Fer a cheval
   objectStepMax: 0
-  steps: 0100000002000000030000000400000008000000
+  steps: 0000000001000000020000000300000005000000
   currentStep: 0
   currentStepValue: 0
   goldGranted: 50
-  doDestroyObject: 0
   iconInStack: {fileID: 1517520082182454339, guid: 13a468ca6662ec24393d602bc79b9905, type: 3}
   stash: {fileID: 0}
 --- !u!95 &3246550974359333063

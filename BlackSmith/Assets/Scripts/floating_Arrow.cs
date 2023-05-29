@@ -10,6 +10,7 @@ public class floating_Arrow : MonoBehaviour
     //public float ecartValue = 0.1f; 
     public Transform point1;
     public Transform point2;
+    public int Step;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,25 @@ public class floating_Arrow : MonoBehaviour
         transform.Rotate (200*Time.deltaTime,0,0); //rotates 50 degrees per second around z axis
         float step  = speed * Time.deltaTime; // calculate distance to move
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
+
+        if(GameManager.instance.stepToGo == Step)
+        {   
+            //green
+            Color newColor = new Color(0f, 1f, 0f, 1f);
+            GetComponent<SpriteRenderer>().color = newColor;
+        }
+        else
+        {
+            if ( Step == (100))
+            {
+                //Do Not change the arrow Color
+            }
+            else
+            {
+            Color newColor = new Color(1f, 1f, 1f, 1f);
+            GetComponent<SpriteRenderer>().color = newColor;
+            }
+        }
 
         //check if arrived at position
         if (Vector3.Distance(transform.position, target.position)< 0.001f)

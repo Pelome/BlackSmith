@@ -17,6 +17,7 @@ TagManager:
   - Page
   - Meule
   - ExitPoint
+  - ObjectToForge
   layers:
   - Default
   - TransparentFX

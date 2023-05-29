@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int staminaInStash;
     public int dollarInStash;
     public int experienceInStash;
+    public int stepToGo;
 
     //objectToCraft
     public GameObject objectToCraft;
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        stepToGo = 0;
     }
 
     // Update is called once per frame
@@ -91,7 +92,10 @@ public class GameManager : MonoBehaviour
     {
         return experienceInStash;
     }
-
+    public int GetCurrentStep()
+    {
+        return stepToGo;
+    }
 
 
     //prendre objet a crafter

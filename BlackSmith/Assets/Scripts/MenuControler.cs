@@ -9,6 +9,7 @@ public Text goldInStash;
 public Text staminaInStash;
 public Text dollarInStash;
 public Text experienceInStash;
+public Text tesIng;
 
     // Start is called before the first frame update
     void Start()
@@ -23,5 +24,6 @@ public Text experienceInStash;
         staminaInStash.text = GameManager.instance.GetCurrentStamina().ToString();
         dollarInStash.text = GameManager.instance.GetCurrentDollar().ToString();
         experienceInStash.text = GameManager.instance.GetCurrentExperience().ToString();
-    }
+        tesIng.text = GameManager.instance.GetCurrentStep().ToString();
+   }
 }

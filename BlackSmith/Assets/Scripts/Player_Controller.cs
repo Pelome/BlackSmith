@@ -52,7 +52,7 @@ public class Player_Controller : MonoBehaviour
             //check if arrived at position
             if (Vector3.Distance(transform.position, target.position)< 0.001f)
             {
-                Debug.Log("JesuisArrivé");
+                //Debug.Log("JesuisArrivé");
                 if(target != null)
                 {
                     if(facingRight == true )
@@ -64,50 +64,50 @@ public class Player_Controller : MonoBehaviour
                     isMoving = false;
                     if (objectToReach.tag == "Anvil")
                     {
-                        Debug.Log("Je suis a anvil");
+                        //Debug.Log("Je suis a anvil");
                         //trouver ici le systeme pour donner le ton par défaut.
                         playerAS.clip = forgeHitSound;
                         myAnim.SetTrigger("Anvil");
                     }
                     if (objectToReach.tag == "Barrel")
                     {
-                        Debug.Log("Je suis a Barrel");
+                        //Debug.Log("Je suis a Barrel");
                         playerAS.clip = smokeSound;
                         myAnim.SetTrigger("Barrel");
                     }
                     if (objectToReach.tag == "Horse")
                     {
-                        Debug.Log("Je suis a Horse");
+                        //Debug.Log("Je suis a Horse");
                         playerAS.clip = ferrierSound;
                         myAnim.SetTrigger("Horse");
                     }
                     if (objectToReach.tag == "Thief")
                     {
-                        Debug.Log("Je suis a Thief");
+                        //Debug.Log("Je suis a Thief");
                         playerAS.clip = ferrierSound;
                         myAnim.SetTrigger("Thief");
                     }
                     if (objectToReach.tag == "FireBowl")
                     {
-                        Debug.Log("Je suis a FireBowl");
+                        //Debug.Log("Je suis a FireBowl");
                         //playerAS.clip = forgingSound;
                         myAnim.SetTrigger("FireBowl");
                     }
                     if (objectToReach.tag == "Meule")
                     {
-                        Debug.Log("Je suis a Meule");
+                        //Debug.Log("Je suis a Meule");
                         playerAS.clip = grindingSound;
                         myAnim.SetTrigger("Meule");
                     }
                     if (objectToReach.tag == "Pannel")
                     {
-                        Debug.Log("Je suis a Pannel");
+                        //Debug.Log("Je suis a Pannel");
                         //playerAS.clip = forgingSound;
                         //myAnim.SetTrigger("FireBowl");
                     }
                     if (objectToReach.tag == "Stash")
                     {
-                        Debug.Log("Je suis a Stash");
+                        //Debug.Log("Je suis a Stash");
                         //playerAS.clip = forgingSound;
                         //myAnim.SetTrigger("FireBowl");
                     }
