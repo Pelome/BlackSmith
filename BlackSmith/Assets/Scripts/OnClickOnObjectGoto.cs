@@ -11,7 +11,9 @@ public class OnClickOnObjectGoto : MonoBehaviour
     public GameObject currentObjectToForge;
 
     void Start()
-    {}
+    {
+        myPlayer = GameObject.FindWithTag("Player"); 
+    }
         
     public void itemIsClicked()
     {
@@ -85,6 +87,9 @@ public class OnClickOnObjectGoto : MonoBehaviour
         } 
 
         if(gameObject.tag == "Horse")
+        {  
+        }
+        if(gameObject.tag == "Thief")
         {  
         }
     }

@@ -16,6 +16,7 @@ TagManager:
   - QuestPannel
   - Page
   - Meule
+  - ExitPoint
   layers:
   - Default
   - TransparentFX

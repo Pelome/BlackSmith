@@ -1,4 +1,4 @@
-   using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     public int[] steps;
     public int currentStep;
     public int currentStepValue;
+    public int goldGranted;
     //private bool isFinished;
     public bool doDestroyObject;
     public GameObject iconInStack;
@@ -20,7 +21,8 @@ public class ObjectToForge_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        stash = GameObject.Find("Interactible_Stash");
+        //stash = GameObject.Find("Interactible_Stash");
+        stash = GameObject.FindWithTag("Stash");
         myAnim = GetComponent<Animator>();
         doDestroyObject = false;
         //isFinished = false;
@@ -36,21 +38,28 @@ public class ObjectToForge_Controller : MonoBehaviour
     {
         if(doDestroyObject == true)
         Destroy(gameObject);
+        Debug.Log("Dernier Step: "+steps[steps.Length-1]);
     }
 
     public void GoNextStep()
     {
+        Debug.Log("Dernier Step: "+steps[steps.Length]);
         if(currentStep == steps.Length -1)
         {
             Stash_Inventory stashScript = stash.gameObject.GetComponent<Stash_Inventory>();
             stashScript.AddItemToStash(gameObject);
+            GameManager.instance.UpdateGold(+goldGranted);
             DestroyThisObject();
         }
-        if (currentStep < steps.Length)
+        else if (currentStep < steps.Length)
         {
             currentStep ++;
             currentStepValue = steps[currentStep];
             gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[currentStep];
+        }
+        else if (currentStepValue == steps[steps.Length])
+        {
+            Debug.Log("j'ai fini");
         }
         else
         {

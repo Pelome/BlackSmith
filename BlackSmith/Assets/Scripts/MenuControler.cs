@@ -6,6 +6,9 @@ using UnityEngine.UI;
 public class MenuControler : MonoBehaviour
 {
 public Text goldInStash;
+public Text staminaInStash;
+public Text dollarInStash;
+public Text experienceInStash;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +20,8 @@ public Text goldInStash;
     void Update()
     {
         goldInStash.text = GameManager.instance.GetCurrentGold().ToString();
+        staminaInStash.text = GameManager.instance.GetCurrentStamina().ToString();
+        dollarInStash.text = GameManager.instance.GetCurrentDollar().ToString();
+        experienceInStash.text = GameManager.instance.GetCurrentExperience().ToString();
     }
 }

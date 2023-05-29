@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject[] objectsInStash;
     public int goldInStash;
+    public int staminaInStash;
+    public int dollarInStash;
+    public int experienceInStash;
 
     //objectToCraft
     public GameObject objectToCraft;
@@ -52,6 +55,20 @@ public class GameManager : MonoBehaviour
         objectCraftStepMax = objectToCraftScript.objectStepMax;
     }
 
+    public void SetGold(int newValue)
+    {
+        goldInStash = newValue;
+    }
+
+    public void UpdateGold(int newValue)
+    {
+        goldInStash = goldInStash+newValue;
+        if (goldInStash <=0)
+        {
+            dollarInStash = 0;
+        }
+    }
+
     //FloatingText
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
@@ -60,19 +77,19 @@ public class GameManager : MonoBehaviour
 
     public int GetCurrentGold()
     {
-/*        int r = 0;
-        int add = 0;
-
-        while(experience >= add)
-        {
-            add += xpTable[r];
-            r++;
-
-            if(r == xpTable.Count) // if max level
-            return r;
-        }
-*/
         return goldInStash;
+    }
+    public int GetCurrentStamina()
+    {
+        return staminaInStash;
+    }
+    public int GetCurrentDollar()
+    {
+        return dollarInStash;
+    }
+    public int GetCurrentExperience()
+    {
+        return experienceInStash;
     }
 
 

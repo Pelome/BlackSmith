@@ -4,29 +4,40 @@ using UnityEngine;
 
 public class spawnThief_Script : MonoBehaviour
 {
-    public float Timer = 2;
+    //public float Timer = 2;
     public GameObject Thief;
     GameObject thiefClone;
+    public float minSpawnInterval = 1f;
+    public float maxSpawnInterval = 3f;
+    private float nextSpawnTime;
     // Start is called before the first frame update
     void Start()
     {
-        
+        nextSpawnTime = Time.time + GetRandomSpawnInterval();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Timer -= Time.deltaTime;
-        if (Timer <= 0f)
+        if (Time.time >= nextSpawnTime)
         {
             SpawnThief();
-
-            Timer = 5f;
+            nextSpawnTime = Time.time + GetRandomSpawnInterval();
         }
     }
 
     public void SpawnThief()
     {
-        thiefClone = Instantiate(Thief, gameObject.transform.position, transform.rotation) as GameObject;
+        int currentGold = GameManager.instance.GetCurrentGold();
+        if(currentGold >=1)
+        {
+            thiefClone = Instantiate(Thief, gameObject.transform.position, transform.rotation) as GameObject;
+        }
+    }
+
+
+    private float GetRandomSpawnInterval()
+    {
+        return Random.Range(minSpawnInterval, maxSpawnInterval);
     }
 }

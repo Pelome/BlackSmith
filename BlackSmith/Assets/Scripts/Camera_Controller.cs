@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Camera_Controller : MonoBehaviour
 {
+// for finger
+public float scrollSpeed = 1f;
+
+//for mouse
     public float dragSpeed = 2;
     private Vector3 dragOrigin;
  
@@ -37,6 +41,7 @@ public class Camera_Controller : MonoBehaviour
         cam = GetComponent<Camera>();
 
         ResizeLevel();
+        //Debug.Log(Application.platform);
     }
 
     void Update()
@@ -60,6 +65,9 @@ public class Camera_Controller : MonoBehaviour
         }
         
         //CameraScroll
+//for mobile
+     #if UNITY_EDITOR
+             //Debug.Log("Editor");
         if(cameraCanScroll)
         {
             Vector2 mousePosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
@@ -75,11 +83,6 @@ public class Camera_Controller : MonoBehaviour
             {
                 cameraDragging = true;
             }
-         
-/*            if (Input.GetMouseButtonDown(0))
-            {
-                Debug.Log("LevelSize : "+ levelSize +" | Left : " + left + " | Right : " + right + " | Mouse position : "+ mousePosition.x + " | border Left : "+ outerLeft +" | border Right : "+ outerRight);
-            }*/
             if (cameraDragging) 
             {
              
@@ -109,9 +112,38 @@ public class Camera_Controller : MonoBehaviour
                     {
                         transform.Translate(-move, Space.World);
                     }
-                }
+                		}
             }
+
         }
+        #elif UNITY_ANDROID
+            //Debug.Log("Android");
+		if(cameraCanScroll)
+        {
+            if (Input.touchCount > 0)
+                if (Input.touchCount > 0)
+                {
+                    Touch touch = Input.GetTouch(0);
+
+                    if (touch.phase == TouchPhase.Moved)
+                    {
+                        float scrollDelta = touch.deltaPosition.x * scrollSpeed * Time.deltaTime;
+                        transform.position -= new Vector3(scrollDelta, 0f, 0f);
+                    }
+                }
+        }
+     #elif UNITY_IOS 
+             //Debug.Log("Ios");
+     #elif UNITY_STANDALONE_OSX
+             //Debug.Log("Osx");
+     #elif UNITY_STANDALONE_WIN
+             //Debug.Log("Win");
+     #endif
+
+
+
+//for mouse
+
     }
 
     public void AlignCameraToPlayer()
