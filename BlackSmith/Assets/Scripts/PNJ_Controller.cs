@@ -91,6 +91,7 @@ public class PNJ_Controller : MonoBehaviour
     {
          if (!isMoving && canMove)// peut etre inutile
          {
+            Debug.Log("J'y vais");
             if(destPosition.transform.position.x > initialPosition.transform.position.x && facingRight)
             {
                 flip();
@@ -108,13 +109,17 @@ public class PNJ_Controller : MonoBehaviour
     {
         if (!isMoving && canMove)// peut etre inutile
         {
+            Debug.Log("je fuis");
             destPosition = exitPosition;
             if(destPosition.transform.position.x > initialPosition.transform.position.x && facingRight)
             {
+                Debug.Log("Je flip");
                 flip();
             }
             if(destPosition.transform.position.x < initialPosition.transform.position.x && !facingRight)
             {
+                Debug.Log("Je flip");
+
                 flip();
             }
             playerAS.Stop();
@@ -141,6 +146,7 @@ public class PNJ_Controller : MonoBehaviour
 
     IEnumerator doGoToExit(GameObject destPosition)
     {
+            //destPosition = exitPosition;
             yield return new WaitForSeconds(.01f);
             while (initialPosition.transform.position.x != destPosition.transform.position.x)
             {
@@ -202,7 +208,7 @@ public class PNJ_Controller : MonoBehaviour
     public void flip()
     {
         facingRight = !facingRight;
-        Vector3 theScale = transform.localScale;
+        Vector3 theScale = spriteToFlip.transform.localScale;
         theScale.x *= -1;
         spriteToFlip.transform.localScale = theScale;
     }
@@ -230,7 +236,7 @@ public class PNJ_Controller : MonoBehaviour
     {
         yield return new WaitForSeconds(.2f);
         isFleeing = true;
-        destPosition = exitPosition;
+        //destPosition = exitPosition;
         speed = 1;
         GoToExit();
     }
