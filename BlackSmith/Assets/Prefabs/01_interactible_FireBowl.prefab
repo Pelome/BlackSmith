@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.47, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 248846380278012070}
   m_RootOrder: 3
@@ -55,8 +56,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248846380028137277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.815, z: 0}
+  m_LocalPosition: {x: 0, y: -0.007, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 248846380278012070}
   m_RootOrder: 0
@@ -142,6 +144,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 248846380260836714}
   m_RootOrder: 0
@@ -229,7 +232,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 248846380134790187}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -276,6 +279,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.0030000003, y: 0.0030000003, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 248846380134790181}
   - {fileID: 6574145290474740057}
@@ -284,7 +288,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.3}
+  m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 300, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &248846380260836719
@@ -379,8 +383,9 @@ GameObject:
   - component: {fileID: 248846380278012070}
   - component: {fileID: 248846380278012065}
   - component: {fileID: 248846380278012064}
+  - component: {fileID: 1331234239}
   m_Layer: 0
-  m_Name: 02_interactible_FireBowl
+  m_Name: 01_interactible_FireBowl
   m_TagString: FireBowl
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -396,6 +401,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5, y: -0.019889427, z: 1.4046117}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 248846380028137282}
   - {fileID: 251027499530147664}
@@ -418,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gotoPosition: {fileID: 680175402}
   myPlayer: {fileID: 0}
-  step: 2
+  stepValue: 1
   currentObjectToForge: {fileID: 0}
 --- !u!61 &248846380278012064
 BoxCollider2D:
@@ -446,6 +452,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.062666416, y: 0.33649242}
   m_EdgeRadius: 0
+--- !u!114 &1331234239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248846380278012067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9398989953c0c3e42b9b61be7b009dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  needArrowIndicator: 1
+  indicator: {fileID: 0}
 --- !u!1001 &248846378671190120
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -479,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433612297463608, guid: 69e62f89c9d82ba4085d34eeff6f57bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.508
+      value: 0.704
       objectReference: {fileID: 0}
     - target: {fileID: 4433612297463608, guid: 69e62f89c9d82ba4085d34eeff6f57bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -551,6 +571,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 248846380260836714}
     m_Modifications:
+    - target: {fileID: 6361363308710710051, guid: c17a3dd202054e2459eb8a3f07b186ae, type: 3}
+      propertyPath: Step
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361363308811251078, guid: c17a3dd202054e2459eb8a3f07b186ae, type: 3}
       propertyPath: m_Name
       value: FloatingArrow

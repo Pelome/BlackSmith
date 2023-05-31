@@ -17,7 +17,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
         
     public void itemIsClicked()
     {
-        Debug.Log("J'ai cliqué sur : " + gameObject.name + " son index est: "+ stepValue);
+        //Debug.Log("J'ai cliqué sur : " + gameObject.name + " son index est: "+ stepValue);
         Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
         doGoto.isClickeed(gotoPosition.transform, gotoPosition.transform.parent.gameObject);
         return;
@@ -60,11 +60,7 @@ public class OnClickOnObjectGoto : MonoBehaviour
         //Ici les restrictions par object
         if(gameObject.tag == "Cart")
         {
-            if (currentObjectToForge == null)
-            {
-                Instantiate(doGoto.objectToForgePrefab,doGoto.objectToForgeSlot.transform);
-                currentObjectToForge = doGoto.objectToForgePrefab;
-            }
+
         }
 
         if(gameObject.tag == "FireBowl")
@@ -94,4 +90,15 @@ public class OnClickOnObjectGoto : MonoBehaviour
         {  
         }
     }
+
+/*    public void SpawnItemToForge()
+    {
+        if (currentObjectToForge == null)
+        {
+            Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
+            currentObjectToForge = GameObject.FindWithTag("ObjectToForge");
+            Instantiate(doGoto.objectToForgePrefab,doGoto.objectToForgeSlot.transform);
+            currentObjectToForge = doGoto.objectToForgePrefab;
+        }
+    }*/
 }

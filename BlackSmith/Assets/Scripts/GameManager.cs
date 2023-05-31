@@ -12,13 +12,15 @@ public class GameManager : MonoBehaviour
     public int dollarInStash;
     public int experienceInStash;
     public int stepToGo;
-
+    public GameObject myPlayer;
+    public GameObject[] objectToForgePrefab;
     //objectToCraft
-    public GameObject objectToCraft;
-    private int objectToCraftID;
-    private string objectToCraftName;
-    private int objectCraftStepMax;
-    private int objectCraftStep;
+    //public GameObject objectToCraft;
+    private int currentObjectToForgeID;
+    private string currentObjectToForgeName;
+    private int currentObjectToForgeStepMax;
+    private int currentObjectToForgeStep;
+    public GameObject currentObjectToForge;
 
     public FloatingTextManager floatingTextManager;
 
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         stepToGo = 0;
+        currentObjectToForge = objectToForgePrefab[0];
     }
 
     // Update is called once per frame
@@ -49,13 +52,27 @@ public class GameManager : MonoBehaviour
     {
         //GetObjectToCraftScript
         //this have to be passed outside update but later in a future function OnObjectChange()
-        ObjectToForge_Controller objectToCraftScript = objectToCraft.gameObject.GetComponent<ObjectToForge_Controller>();
+        ObjectToForge_Controller objectToCraftScript = currentObjectToForge.gameObject.GetComponent<ObjectToForge_Controller>();
         
-        objectToCraftID = objectToCraftScript.objectID;
-        objectToCraftName = objectToCraftScript.objectName;
-        objectCraftStepMax = objectToCraftScript.objectStepMax;
+        currentObjectToForgeID = objectToCraftScript.objectID;
+        currentObjectToForgeName = objectToCraftScript.objectName;
+        currentObjectToForgeStepMax = objectToCraftScript.objectStepMax;
     }
-
+    public void SetObjectToCraft(int indexOfObject)
+    {
+        currentObjectToForge = objectToForgePrefab[indexOfObject];
+        SpawnItemToForge();
+    }
+    public void SpawnItemToForge()
+    {
+        //if (currentObjectToForge == null)
+        //{
+            Player_Controller doGoto = myPlayer.gameObject.GetComponent<Player_Controller>();
+            //currentObjectToForge = GameObject.FindWithTag("ObjectToForge");
+            Instantiate(currentObjectToForge,doGoto.objectToForgeSlot.transform);
+            //currentObjectToForge = doGoto.objectToForgePrefab;
+        //}
+    }
     public void SetGold(int newValue)
     {
         goldInStash = newValue;

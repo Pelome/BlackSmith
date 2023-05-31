@@ -31,7 +31,7 @@ public class ObjectToForge_Controller : MonoBehaviour
         objectStepMax = steps.Length;
         //set the first sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = objectSprites[0]; 
-        Debug.Log("Dernier Step: "+steps[steps.Length-1]);
+        //Debug.Log("Dernier Step: "+steps[steps.Length-1]);
         GameManager.instance.stepToGo = steps[1];
 
     }
@@ -41,7 +41,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     {
 /*        if(doDestroyObject == true)
         Destroy(gameObject);*/
-        Debug.Log(steps.Length);
+        //Debug.Log(steps.Length);
 
     }
 
@@ -97,7 +97,7 @@ public class ObjectToForge_Controller : MonoBehaviour
     public void DestroyThisObject()
     {
         //failAnim.SetActive(true);
-        Debug.Log("Object Détruit");
+        //Debug.Log("Object Détruit");
         GameManager.instance.stepToGo = 0;
         myAnim.SetTrigger("toDestroy");
         Destroy(gameObject);

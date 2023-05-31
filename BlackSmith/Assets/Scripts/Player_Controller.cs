@@ -24,7 +24,7 @@ public class Player_Controller : MonoBehaviour
     public AudioClip ferrierSound;
     public AudioClip forgingSound;
     public AudioClip grindingSound; 
-    public GameObject objectToForgePrefab;
+    //public GameObject objectToForgePrefab;
     public GameObject objectToForgeSlot;
     public Transform target;
     public GameObject objectToReach;

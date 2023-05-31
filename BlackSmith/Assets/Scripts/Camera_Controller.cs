@@ -148,13 +148,13 @@ public float scrollSpeed = 1f;
 
     public void AlignCameraToPlayer()
     {
-        Debug.Log("Je m'aligne");
+        //Debug.Log("Je m'aligne");
         Vector3 targetCamPos = target.position + offset;
         //transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing*Time.deltaTime);
         cameraCanFollow = true;
         cameraCanScroll = false;
 
-        Debug.Log(Mathf.Round(transform.position.x*100)/100 +"__"+ Mathf.Round(targetCamPos.x*100)/100);
+        //Debug.Log(Mathf.Round(transform.position.x*100)/100 +"__"+ Mathf.Round(targetCamPos.x*100)/100);
     }
  
     void ResizeLevel()

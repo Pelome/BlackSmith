@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [DefaultExecutionOrder(0)]
-public class Target : MonoBehaviour
+public class Target2 : MonoBehaviour
 {
     [Tooltip("Select if arrow indicator is required for this target")]
     [SerializeField] private bool needArrowIndicator = true;
@@ -17,21 +17,26 @@ public class Target : MonoBehaviour
         }
     }
 
+    public void AbleNeedArrowIndicator(bool isneeded)
+    {
+    	needArrowIndicator = isneeded;
+    }
+
     // On enable add this target object to the targets list.
     private void OnEnable()
     {
-        if(OffScreenIndicator.TargetStateChanged != null)
+        if(OffScreenIndicator2.TargetStateChanged != null)
         {
-            OffScreenIndicator.TargetStateChanged.Invoke(this, true);
+            OffScreenIndicator2.TargetStateChanged.Invoke(this, true);
         }
     }
 
     // On disable remove this target object from the targets list.
     private void OnDisable()
     {
-        if(OffScreenIndicator.TargetStateChanged != null)
+        if(OffScreenIndicator2.TargetStateChanged != null)
         {
-            OffScreenIndicator.TargetStateChanged.Invoke(this, false);
+            OffScreenIndicator2.TargetStateChanged.Invoke(this, false);
         }
     }
 

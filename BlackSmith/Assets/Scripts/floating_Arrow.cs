@@ -35,17 +35,20 @@ public class floating_Arrow : MonoBehaviour
             //green
             Color newColor = new Color(0f, 1f, 0f, 1f);
             GetComponent<SpriteRenderer>().color = newColor;
+            GetComponentInParent<Target2>().AbleNeedArrowIndicator(true);
         }
         else
         {
             if ( Step == (100))
             {
                 //Do Not change the arrow Color
+            GetComponentInParent<Target2>().AbleNeedArrowIndicator(false);
             }
             else
             {
             Color newColor = new Color(1f, 1f, 1f, 1f);
             GetComponent<SpriteRenderer>().color = newColor;
+            GetComponentInParent<Target2>().AbleNeedArrowIndicator(false);
             }
         }
 
