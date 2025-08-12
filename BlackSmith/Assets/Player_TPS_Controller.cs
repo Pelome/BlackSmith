@@ -47,22 +47,22 @@ public class Player_TPS_Controller : MonoBehaviour
 
     private void Walk(Vector2 dir)
     {
-        rb.velocity = (new Vector2(dir.x * speed, rb.velocity.y));
+        rb.linearVelocity = (new Vector2(dir.x * speed, rb.linearVelocity.y));
     }
 
     private void Jump()
     {
         Debug.Log("I am jumping");
-        rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.velocity += Vector2.up * jumpForce;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
+        rb.linearVelocity += Vector2.up * jumpForce;
     }
 
     private void Dash(float x, float y)
     {
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         Vector2 dir = new Vector2(x, y);
 
-        rb.velocity += dir.normalized * dashSpeed;
+        rb.linearVelocity += dir.normalized * dashSpeed;
     }
 
     private void flip()
